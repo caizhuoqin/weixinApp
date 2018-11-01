@@ -1,0 +1,17 @@
+{
+  "name": "annimita_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "_dom7@2.1.2@dom7": "^2.1.2",
+    "_swiper@4.4.1@swiper": "^4.4.1",
+    "_ssr-window@1.0.1@ssr-window": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

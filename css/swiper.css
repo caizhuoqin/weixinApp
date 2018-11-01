@@ -1,0 +1,686 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure,figcaption{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+b,strong{font-weight:normal;}
+em,i{font-style:normal;}
+a,u{text-decoration: none;}
+img{border:0;display:block;}
+input{outline:none;}
+
+*{
+    box-sizing:border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+.swiper-container{
+	width:100vw;
+	height:80rem;
+	overflow: hidden;
+	
+}
+.swiper-wrapper{
+	width: 100%;
+	height: 100%;
+	
+}
+.swiper-slide1{
+	text-align: center;
+	width: 100vw;
+	height: 100rem;
+	
+}
+.swiper-slide{
+	text-align: center;
+	width: 100vw;
+	height: 100vw;
+}
+.num1{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.num1 .num1_top{
+	padding-top: 1rem;
+	width: 100vw;
+	height: 10rem;
+	display: flex;
+	/*flex-direction: column;*/
+	justify-content: space-between;
+}
+
+.num1 .num1_top .logo{
+	width: 20.4rem;
+	height: 4.1rem;
+}
+.num1 .num1_top .logo img{
+	width: 100%;
+	height: 100%;
+}
+.num1 .num1_top .logoNext{
+	width: 8rem;
+	height: 8rem;
+}
+.num1 .num1_top .logoNext img{
+	width: 100%;
+	height: 100%;
+}
+.num_center{
+	width: 100vw;
+	height: 50rem;
+	background:url(../images/indexSnacky.jpg)no-repeat;
+	background-size:100% 100%;
+}
+.num_center .num_img{
+	position: relative;
+	margin: 25rem auto;
+	width: 25rem;
+	height: 10rem;
+}
+.num_center .num_img .swiper-slide{
+	position: absolute;
+	width: 25rem;
+	height: 10rem;
+	top: 0;
+	left: 0;
+}
+.num_center .swiper-slide img{
+	position: absolute;
+	top: 5rem;
+	left: 50%;
+	animation: num_img 2s;
+	/*animation: big 3s;*/
+	animation-fill-mode:forwards;
+	/*-webkit-animation:num_img 2s linear forwards;*/
+}
+ .num_center .swiper-slide .box-ani{
+            animation-name: num_img;
+        }
+@keyframes num_img{
+			 0%{
+			 	width: 0rem;height: 0rem;
+		          transform: translateX(0rem) translateY(0rem) 
+            }
+            
+            100%{
+            	width: 30rem;height: 10rem;
+                transform:translateX(-13rem) translateY(-5rem) 
+            }
+            
+}
+.num_bottom{	
+	width: 100vw;
+	height: 17rem;
+	overflow: hidden;
+}
+.num_bottom img{
+	width: 100%;
+	height: 100%;
+}
+.big_div{
+	position: relative;
+}
+/*设置annimita动画效果,使得图片无限循环*/
+.num_bottom_1{
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 100vw;
+	height: 17rem;
+	/*设置动画效果,infinte linner 动画无限循环*/
+	animation: swiper_num 15s infinite linear;
+}
+/*设置annimita动画效果,使得图片无限循环*/
+/*设置两张图片一起循环,使看起来是一个图片无限循环*/
+.num_bottom_2{
+	position: absolute;
+	top: 0;
+	left: -100vw;
+	width: 100vw;
+	height: 17rem;
+	animation: swiper_num 15s infinite linear;
+}
+
+.big_div .arrows{
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	width: 4rem;
+	height: 6rem;
+	/*border: 1px solid #000000;*/
+	animation: arrows_img 1s infinite linear;
+}
+
+@keyframes swiper_num{
+	0%{
+		transform: translateX(0rem);
+	}
+	25%{
+			transform: translateX(25%);
+	}
+	50%{
+			transform: translateX(50%);
+	}
+	75%{
+			transform: translateX(75%);
+	}
+	100%{
+			transform: translateX(100%);
+	}
+}
+
+@keyframes arrows_img{
+	0%{
+		
+		transform: translateY(0rem);
+	}
+	25%{
+		transform: translateY(-0.5rem);
+	}
+	50%{
+		opacity: 1;
+			transform: translateY(-1rem);
+	}
+	75%{
+		
+			transform: translateY(-1.5rem);
+	}
+	100%{
+		opacity: 0;
+			transform: translateY(-2rem);
+	}
+}
+
+
+/*设置第二页的内容*/
+.num2{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	background-color:#fe657a;
+	position: relative;
+}
+/*设置大图*/
+.num2 .num2_bigimg{
+	position: absolute;
+	display: flex;
+	left: 10rem;
+	width:100%;
+	height:100%;
+}
+.num2 .num2_bigimg img{
+	width:60rem;
+	height: 100%;
+}
+
+/*设置闪烁的灯光*/
+.num2 .num2_beijing{
+	position:absolute;
+	z-index: 2;
+	top:0rem;
+	left: 12rem;
+	width:50rem;
+	height:100%;
+	animation:twinkling 1s infinite linear;
+}
+.num2 .num2_beijing img{
+	width: 100%;
+	height: 100%;
+}
+@-webkit-keyframes twinkling{	/*透明度由0到1*/
+	0%{
+		opacity:0.1;				/*透明度为0*/
+	}
+	100%{
+		opacity:1;				/*透明度为1*/
+	}
+}
+/*设置音乐小图标*/
+.num2 .num2_music{
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	width: 6rem;
+	height: 6rem;
+}
+.num2 .num2_music img{
+	width: 100%;
+	height: 100%;
+}
+.num2 .num2_min{
+	position: absolute;
+	width: 5rem;
+	height: 10rem;
+	bottom:5rem;
+	left: 50%;
+}
+/*设置上下小图标*/
+.num2 .num2_min{
+	width: 4.3rem;
+	height: 6.2rem;
+	animation: arrows_img 1s infinite linear;
+}
+/*设置星星效果*/
+.num2 .num2_xx{
+	position: absolute;
+	left: 10rem;
+	width: 40rem;
+	height: 100%;
+	z-index: 1;
+}
+.num2 .num2_xx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation:twinkling 1s infinite linear;
+}
+
+/*设置头部的文字*/
+.num2 .num2_top{
+	position: absolute;
+	top: 5rem;
+	left: 5rem;
+	width: 15rem;
+	height: 30rem;	
+}
+.num2 .num2_top .ani{
+	position: absolute;
+	top: 0;
+	left: 5rem;
+	width: 5rem;
+	height: 30rem;
+	color: #fff;
+	z-index: 1;
+}
+
+.num2_right{
+	position: absolute;
+	width: 10rem;
+	height: 30rem;
+	top: 40rem;
+	right: 2rem;
+}
+.num2_right img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.num3{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	background-color:#09bee3;
+}
+.num3 .num3_top{
+	position: absolute;
+	top:2rem;
+	left: 2rem;
+	width: 10rem;
+	height: 30rem;
+	z-index: 1;
+}
+.num3 .num3_top img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.num3 .num3_right{
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	width: 8rem;
+	height: 8rem;
+	z-index: 1;
+}
+.num3 .num3_right img{
+	width: 100%;
+	height: 100%;
+}
+.num3 .num3_bigimg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50rem;
+	height: 60rem;
+}
+.num3 .num3_bigimg img{
+	width: 100%;
+	height: 100%;
+}
+
+/*设置灯光效果*/
+.num3 .num3_dg{
+	position: absolute;
+	top:0rem;
+	left:-23rem;
+	width: 70rem;
+	height: 100rem;
+	z-index: 1;
+}
+.num3 .num3_dg img{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation:twinkling 1s infinite linear;
+}
+
+/*设置星星的效果*/
+.num3 .num3_xx{
+	position: absolute;
+	left: 10rem;
+	width: 40rem;
+	height: 100%;
+	z-index: 1;
+}
+.num3 .num3_xx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation:twinkling 1s infinite linear;
+	
+}
+/*设置右下方的文字图片*/
+.num3 .num3_wz{
+	position: absolute;
+	width: 15rem;
+	height: 30rem;
+	bottom: 0;
+	right:0;
+}
+.num3 .num3_wz img{
+	position: absolute;
+	
+}
+
+/*设置上下图标的效果*/
+.num3 .num3_jt{
+	position: absolute;
+	bottom: 5rem;
+	left: 50%;
+	width: 4rem;
+	height: 4rem;
+}
+.num3 .num3_jt img{
+	width: 100%;
+	height: 100%;
+	animation: arrows_img 1s infinite linear;
+}
+
+
+/*设置第四张图片*/
+.num4{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	background-color:#36a15c;
+}
+.num4 .num4_boy{
+	position: absolute;
+	width: 64rem;
+	height: 70rem;
+	z-index: 1;
+}
+.num4 .num4_boy img{
+	position: absolute;
+	width: 100%;
+	height: 70rem;
+}
+.num4 .num4_boy .num4_boy_dg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	animation:twinkling 1s infinite linear;
+}
+
+.num4 .num4_girld{
+	position: absolute;
+	width: 64rem;
+	height: 70rem;
+}
+.num4 .num4_girld img{
+	position: absolute;
+	width: 100%;
+	height: 70rem;
+}
+
+.num4 .num4_girld_dg{
+	position: absolute;
+	width: 64rem;
+	height: 70rem;
+	z-index: 2;
+	animation-duration: 2s;
+	animation:twinkling 1s infinite linear;
+}
+.num4 .num4_girld_dg img{
+	position: absolute;
+	width: 100%;
+	height: 70rem;
+}
+/*<!--设置“由你来选”-->*/
+ .num4 .num4_yn{
+ 	position: absolute;
+ 	width: 15rem;
+ 	height: 4rem;
+ 	overflow: hidden;
+ 	bottom: 6rem;
+ 	left: 40%;
+ 	z-index: 10;
+ }
+ .num4 .num4_yn img{
+ 	position: absolute;
+ 	top: -2rem;
+ 	width: 100%;
+ 	height:6rem;
+ }
+ /*.num4 .num4_yn img:nth-child(2){
+ 	    animation:twinkling 1s infinite linear;
+ }*/
+ .num4 .num4_xtb{
+ 	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	width: 4rem;
+	height: 4rem;
+ }
+ .num4 .num4_xtb img{
+ 	width: 100%;
+ 	height: 100%;
+ 	animation: arrows_img 1s infinite linear;
+ }
+  .num4 .num4_music{
+  	position: absolute;
+  	top: 2rem;
+  	right: 2rem;
+  	width: 6rem;
+  	height: 6rem;
+  }
+.num4 .num4_music img{
+    	width: 100%;
+    	height: 100%;
+    }
+
+.num5{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	background-color:#2C8DFB;
+}
+.num5 .num5_top{
+	position: absolute;
+	top: 10rem;
+	left: 30%;
+	width: 26rem;
+	height: 16rem;
+	opacity: 0.5;
+}
+.num5 .num5_top img{
+	width: 100%;
+	height: 1005;
+}
+  .num5 .num5_music{
+  	position: absolute;
+  	top: 2rem;
+  	right: 2rem;
+  	width: 6rem;
+  	height: 6rem;
+  }
+.num5 .num5_music img{
+	position: absolute;
+    	width: 100%;
+    	height: 100%;
+    }
+    
+.num5 .num5_center{
+	position: absolute;
+	top: 30rem;
+	left: 50%;
+	width: 0.4rem;
+	height: 7rem;
+}
+.num5 .num5_center img{
+	width: 100%;
+	height: 100%;
+}
+
+.num5 .num5_bottom{
+	position: absolute;
+	bottom:0;
+	left: 20%;
+	width:40rem;
+	height: 25rem;
+	z-index: 1;
+}
+.num5 .num5_bottom img{
+	top: 0;
+	position: absolute;
+}
+/*设置第六张图片*/
+.num6{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+}
+.num6 .num6_top{
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	width: 23rem;
+	height: 4rem;
+}
+.num6 .num6_top img{
+	width: 100%;
+	height: 100%;
+}
+  .num6 .num6_music{
+  	position: absolute;
+  	top: 2rem;
+  	right: 2rem;
+  	width: 6rem;
+  	height: 6rem;
+  }
+.num6 .num6_music img{
+	position: absolute;
+    	width: 100%;
+    	height: 100%;
+    }
+/*设置实习生项目*/
+.num6 .num6_xm{
+	position: absolute;
+	top: 15rem;
+	left: 10rem;
+	width: 40rem;
+	height: 5rem;
+}
+.num6 .num6_xm img{
+	width: 100%;
+	height: 100%;
+}
+.num6 .num6_inp{
+	position: absolute;
+	top: 30rem;
+	left: 10rem;
+	width: 40rem;
+	height: 4rem;
+}
+.num6 .num6_inp .num6_inp_a{
+	width: 40rem;
+	height: 4rem;
+	border:1px solid #ccc;
+}
+.num6 .num6_inp .num6_inp_left{
+	width: 20rem;
+	height: 4rem;
+	overflow: hidden;
+}
+.num6 .num6_inp .num6_inp_right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 4rem;
+	height: 4rem;
+	background: blue;
+}
+.num6 .num6_inp .num6_inp_left img{
+	width: 100%;
+	height: 100%;
+}
+.num6 .num6_inp .num6_inp_right img{
+	width: 100%;
+	height: 100%;
+}
+
+.num6 .num6_bottom{
+	position: absolute;
+	top: 60rem;
+	left: 10rem;
+	width: 45rem;
+	height: 12rem;
+}
+.num6 .num6_bottom img:nth-child(1){
+	position: absolute;
+	top: 3rem;
+	left: 15rem;
+	width: 14.7rem;
+	height: 3rem;
+}
+.num6 .num6_bottom img:nth-child(2){
+	position: absolute;
+	top: 7rem;
+	left: 0rem;
+	width:20rem;
+	height: 5rem;
+}
+.num6 .num6_bottom img:nth-child(3){
+	position: absolute;
+	top: 7rem;
+	left: 25rem;
+	width: 20rem;
+	height: 5rem;
+}
