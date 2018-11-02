@@ -30,6 +30,11 @@ if(browser.versions.webKit){
 
 //判断是否移动端
 if(browser.versions.mobile||browser.versions.android||browser.versions.ios){
-    var $window_img = document.querySelector('.window_img');
-    $window_img.style.display = 'none';
+    
 }
+//else{
+//	alert('请切换移动端，并刷新页面');
+//  var $window_img = document.querySelector('.window_img');
+//  $window_img.style.display = 'block';
+//}
+
