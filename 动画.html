@@ -13,7 +13,10 @@
        <div class="swiper-slide num1">
         	<div class="num1_top">
         		<div class="logo" ><img src="images/logo_gray.png"/></div>
-        		<div class="logoNext"><img src="images/musicBtn.png"/></div>
+        		<div class="logoNext">
+        			<img src="images/musicBtn.png"/>
+        		<EMBED src="music/music.mp3" width=0 height=0 type=audio/mpeg loop="1" autostart="true" volume="0"></EMBED> 
+        		</div>
         	</div>
         	<div class="num_center">
         		<div class="num_img">	
@@ -412,7 +415,15 @@
                     </div>
         			</div>
     				<div class="num6_inp_right">
-    					<img src="images/iconsZoom.png"/>
+    					<div class="box ani"  
+                        swiper-animate-effect="flash" 
+                        swiper-animate-duration="2s" 
+                        swiper-animate-delay="1.3s">
+                        <img src="images/iconsZoom.png"/>
+                    </div>
+    					
+    					
+    					
     				</div>
         			</div>
         		</div>
@@ -432,11 +443,20 @@
         		</div>
     		</div>
     	</div>
-    
+
     </div>
 </div>
+
+	<div class="window_img">
+		<div class="window_wz">
+			<div class="window_fk"></div>
+			<h3>请将浏览器竖向浏览</h3>
+		</div>
+	</div>
+
 	<script src="dist/js/swiper.min.js"></script>
     <script src="dist/js/swiper.animate1.0.3.min.js"></script>
+	<script src="js/weixin.js"></script>
 		<script type="text/javascript">
 		var mySwiper = new Swiper('.swiper-container', {
 			direction : 'vertical',
@@ -451,7 +471,7 @@
                   //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
                 } 
             }
-       });
+      });
       </script>
 		
 		
